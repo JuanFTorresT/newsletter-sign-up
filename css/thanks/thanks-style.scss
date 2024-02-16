@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@mixin mobile ($medida : 780px){
+    @media screen and (max-width: $medida) {
+        @content
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    font-size: 16px;
+    background-color: hsl(235, 18%, 26%);
+    color: hsl(234, 29%, 20%);
+}
+
+.thanks{
+    background-color: #FFF;
+    max-width: 450px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .3);
+
+    @include mobile(){
+        min-height: 100vh;
+        border-radius: 0;
+        justify-content: center;
+    }
+
+    .thanks__title{
+        font-weight: 700;
+        font-size: 3rem;
+    }
+
+    .thanks__description{
+        font-size: .9rem;
+        .email{
+            text-decoration: none;
+            color: hsl(234, 29%, 20%);
+            font-weight: 700;
+        }
+    }
+
+    .thanks__button{
+        width: 100%;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: hsl(234, 29%, 20%);
+        color: white;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background: linear-gradient(to right, hsl(347, 100%, 67%),hsl(4, 100%, 67%));
+            box-shadow: 0 10px 20px hsla(4, 100%, 67%, 0.625);
+        }
+
+        @include mobile(){
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            width: 90%;
+        }
+    }
+
+    @include mobile(){
+        position: relative;
+
+    }
+}

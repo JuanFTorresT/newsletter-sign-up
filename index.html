@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./css/index/index-style.css">
+</head>
+<body>
+
+  <!-- Sign-up form start -->
+
+  <main class="newsletter">
+
+    <div class="newsletter__info">
+
+      <h1 class="newsletter__title">Stay updated!</h1>
+
+      <p class="newsletter__description">Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <ul class="newsletter__list">
+        <li class="newsletter__item"><i class="newsletter__icon"> <img src="assets/images/icon-list.svg" alt=""></i>Product discovery and building what matters</li>
+        <li class="newsletter__item"><i class="newsletter__icon"><img src="assets/images/icon-list.svg" alt=""></i>Measuring to ensure updates are a success</li>
+        <li class="newsletter__item"><i class="newsletter__icon"><img src="assets/images/icon-list.svg" alt=""></i>And much more!</li>
+      </ul>
+
+      <form action="POST" id="form" class="newsletter__form">
+        <div class="labels">
+          <label for="mail" class="newsletter__label">Email address</label>
+          <p class="newsletter__label invalid">valid email required</p>
+        </div>
+        
+        <input type="email" name="mail" id="mail" placeholder="email@company.com" class="newsletter__input" required>
+        <button type="submit" class="newsletter__button">Subscribe to monthly newsletter</button>
+      </form>
+
+    </div>
+
+    <div class="newsletter__image">
+
+      <img class="image" src="assets/images/illustration-sign-up-desktop.svg" alt="">
+
+    </div>
+
+  </main>
+
+  <!-- Sign-up form end -->
+  <script src="index.js"></script>
+</body>
+</html>
